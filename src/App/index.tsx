@@ -1,9 +1,25 @@
 import React from 'react';
 
-import './index.module.scss';
+import {
+  Route,
+  Link,
+  Switch,
+  Redirect,
+} from 'react-router-dom';
 
-const App: React.FC<{}> = () => {
-  return <div>Hello world</div>;
-};
+import styles from './index.module.scss';
+
+import Template from './Template';
+import Splash from './Splash';
+
+const App: React.FC<{}> = () => (
+  <div className={styles['app-container']}>
+    <Template>
+      <Switch>
+        <Route exact path="/" component={Splash} />
+      </Switch>
+    </Template>
+  </div>
+);
 
 export default App;
