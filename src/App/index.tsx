@@ -2,24 +2,22 @@ import React from 'react';
 
 import {
   Route,
-  Link,
   Switch,
-  Redirect,
 } from 'react-router-dom';
-
-import styles from './index.module.scss';
 
 import Template from './Template';
 import Splash from './Splash';
+import Sandbox from './Sandbox';
+import Resume from './Resume';
 
 const App: React.FC<{}> = () => (
-  <div className={styles['app-container']}>
-    <Template>
-      <Switch>
-        <Route exact path="/" component={Splash} />
-      </Switch>
-    </Template>
-  </div>
+  <Template>
+    <Switch>
+      <Route exact path="/" component={Splash} />
+      <Route exact path="/sandbox" component={Sandbox} />
+      <Route exact path="/resume" component={Resume} />
+    </Switch>
+  </Template>
 );
 
 export default App;

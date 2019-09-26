@@ -1,9 +1,9 @@
 import React from 'react';
 
-import './index.module.scss';
+import styles from './index.module.scss';
 
 const Sandbox: React.FC<{}> = () => {
-  return <div>Hello world</div>;
+  return <div className={styles['sandbox-container']}>Sandbox page</div>;
 };
 
 export default Sandbox;

@@ -27,7 +27,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-html, body, div#root {
+html, body {
   font-size: $font-size-base;
   font-family: $font-family-base;
   font-weight: $font-weight-base;
@@ -37,4 +37,11 @@ html, body, div#root {
   height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+div#root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }

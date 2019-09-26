@@ -1,9 +1,9 @@
 import React from 'react';
 
-import './index.module.scss';
+import styles from './index.module.scss';
 
 const Resume: React.FC<{}> = () => {
-  return <div>Hello world</div>;
+  return <div className={styles['resume-container']}>Resume page</div>;
 };
 
 export default Resume;

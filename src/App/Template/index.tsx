@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import styles from './index.module.scss';
 
 const Template: React.FC<{}> = (props) => {
@@ -8,12 +10,22 @@ const Template: React.FC<{}> = (props) => {
   } = props;
 
   return (
-    <div className={styles['template-container']}>
+    <>
       <header>
         <h1>Chance Graff</h1>
       </header>
-      {children}
-    </div>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/sandbox">Sandbox</Link>
+        <Link to="/resume">Resume</Link>
+      </nav>
+      <section className={styles['section-container']}>
+        {children}
+      </section>
+      <footer>
+        <span>Chance Graff</span>
+      </footer>
+    </>
   );
 };
 
