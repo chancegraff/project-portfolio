@@ -1,8 +1,10 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import Header from './Header';
+import Nav from './Nav';
+import Section from './Section';
+import Footer from './Footer';
 
-import styles from './index.module.scss';
 
 const Template: React.FC<{}> = (props) => {
   const {
@@ -11,20 +13,12 @@ const Template: React.FC<{}> = (props) => {
 
   return (
     <>
-      <header>
-        <h1>Chance Graff</h1>
-      </header>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/sandbox">Sandbox</Link>
-        <Link to="/resume">Resume</Link>
-      </nav>
-      <section className={styles['section-container']}>
+      <Header />
+      <Nav />
+      <Section>
         {children}
-      </section>
-      <footer>
-        <span>Chance Graff</span>
-      </footer>
+      </Section>
+      <Footer />
     </>
   );
 };
