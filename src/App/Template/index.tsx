@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './index.module.scss';
+import styles from './index.module.scss';
 
 const Template: React.FC<{}> = (props) => {
   const {
@@ -8,7 +8,7 @@ const Template: React.FC<{}> = (props) => {
   } = props;
 
   return (
-    <div>
+    <div className={styles['template-container']}>
       <header>
         <h1>Chance Graff</h1>
       </header>

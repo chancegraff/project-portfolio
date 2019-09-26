@@ -1,9 +1,9 @@
 import React from 'react';
 
-import './index.module.scss';
+import styles from './index.module.scss';
 
 const Splash: React.FC<{}> = () => {
-  return <div>Hello world</div>;
+  return <div className={styles['splash-container']}>Hello world</div>;
 };
 
 export default Splash;
