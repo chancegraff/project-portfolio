@@ -4,3 +4,12 @@ $element-spacing-small: 8px;
 $element-spacing-medium: 12px;
 $element-spacing-large: 24px;
 $element-spacing-xlarge: 32px;
+
+@mixin grid-spacing() {
+  width: 1024px;
+  margin: 0px auto;
+
+  @media(max-width: 1024px) {
+    width: 100%;
+  }
+}

@@ -4,14 +4,24 @@
 .hero-container {
   display: flex;
   align-items: flex-end;
-  height: 550px;
+  height: 660px;
 
   .title-container {
+    width: 80%;
     font-size: $font-size-hero;
     line-height: 160px;
-    margin-left: -6px;
-    margin-bottom: -16px;
+    margin-left: -1%;
+    margin-bottom: -1.25%;
     color: $color-white;
     text-shadow: -1px 0 $color-black, 0 1px $color-black, 1px 0 $color-black, 0 -1px $color-black;
+
+    @media(max-width: 1024px) {
+      width: 100%;
+      margin-bottom: -1.75%;
+    }
+  }
+
+  @media(max-width: 600px) {
+   height: 445px;
   }
 }

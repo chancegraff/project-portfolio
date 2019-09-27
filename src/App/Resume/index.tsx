@@ -8,7 +8,7 @@ const Resume: React.FC<{}> = () => {
   return (
     <div className={styles['resume-container']}>
       <Hero>
-        <span>Resume</span>
+        Resume
       </Hero>
       <div className={styles['about-container']}>
         <span>About</span>
