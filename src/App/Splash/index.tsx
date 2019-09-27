@@ -11,7 +11,7 @@ const Splash: React.FC<{}> = () => {
   return (
     <div className={styles['splash-container']}>
       <Hero>
-        <HeroSvg className={styles['hero-svg']} />
+        <HeroSvg />
       </Hero>
       <div className={styles['about-container']}>
         <div className={styles['about']}>

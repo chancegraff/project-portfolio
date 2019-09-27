@@ -10,7 +10,7 @@ const Resume: React.FC<{}> = () => {
   return (
     <div className={styles['resume-container']}>
       <Hero>
-        <ResumeSvg className={styles['hero-svg']} />
+        <ResumeSvg />
       </Hero>
       <div className={styles['about-container']}>
         <span>About</span>

@@ -6,6 +6,7 @@ import styles from './index.module.scss';
 
 const Hero: React.FC<{
   className?: string,
+  children: React.ReactElement<React.SVGProps<SVGSVGElement>>,
 }> = (props) => {
   const {
     className,
@@ -19,7 +20,9 @@ const Hero: React.FC<{
         className,
       )}
     >
-      <h1 className={styles['title-container']}>{children}</h1>
+      <h1 className={styles['title-container']}>
+        {children}
+      </h1>
     </div>
   );
 };

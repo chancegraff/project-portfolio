@@ -24,6 +24,18 @@
     @media(max-width: $width-mobile) {
       margin-bottom: -2%;
     }
+
+    svg {
+      width: 100%;
+      height: auto;
+
+      text {
+        font-family: $font-family-title;
+        fill: $color-white;
+        stroke: $color-black;
+        stroke-width: 2px;
+      }
+    }
   }
 
   @media(max-width: $width-mobile) {

@@ -10,7 +10,7 @@ const Sandbox: React.FC<{}> = () => {
   return (
     <div className={styles['sandbox-container']}>
       <Hero>
-        <SandboxSvg className={styles['hero-svg']} />
+        <SandboxSvg />
       </Hero>
       <div className={styles['about-container']}>
         <span>About</span>
