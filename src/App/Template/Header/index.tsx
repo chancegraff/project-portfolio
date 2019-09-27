@@ -1,11 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
+import { ReactComponent as Logo } from './logo.svg';
 import styles from './index.module.scss';
 
 
 const Header: React.FC<{}> = (props) => (
   <header className={styles['header-container']}>
-    <h1>Chance Graff</h1>
+    <Link to="/">
+      <Logo className={styles['logo']} />
+    </Link>
   </header>
 );
 

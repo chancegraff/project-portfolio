@@ -1,4 +1,4 @@
-$font-family-base: 'Helvetica Neue';
+$font-family-base: 'Nunito Sans';
 $font-size-base: 16px;
 $font-weight-base: 400;
 $line-height-base: 18px;
@@ -9,10 +9,15 @@ $font-size-medium: 20px;
 $font-size-large: 24px;
 $font-size-xlarge: 32px;
 
-$line-height-paragraph: 28px;
+$line-height-xsmall: 12px;
+$line-height-small: 16px;
+$line-height-medium: 22px;
+$line-height-large: 26px;
+$line-height-xlarge: 34px;
 
-$font-weight-light: 300;
+$font-weight-xlight: 300;
+$font-weight-light: 400;
 $font-weight-bold: 500;
 $font-weight-xbold: 600;
 
-$font-family-title: '';
+$font-family-title: 'Halant';

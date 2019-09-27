@@ -1,5 +1,7 @@
 import React from 'react';
 
+import styles from './index.module.scss';
+
 import Header from './Header';
 import Nav from './Nav';
 import Section from './Section';
@@ -13,8 +15,10 @@ const Template: React.FC<{}> = (props) => {
 
   return (
     <>
-      <Header />
-      <Nav />
+      <div className={styles['header-nav-container']}>
+        <Header />
+        <Nav />
+      </div>
       <Section>
         {children}
       </Section>

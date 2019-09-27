@@ -1,3 +1,18 @@
-.nav-container {
+@import '__styles__/typography';
+@import '__styles__/spacing';
+@import '__styles__/colors';
 
+.nav-container {
+  a {
+    color: $color-black;
+    line-height: $line-height-large;
+    font-size: $font-size-large;
+    font-family: $font-family-title;
+    font-weight: $font-weight-xbold;
+    margin-right: $element-spacing-xlarge;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
 }
