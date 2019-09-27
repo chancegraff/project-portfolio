@@ -13,13 +13,13 @@ const Nav: React.FC<{
 }> = (props) => {
   const {
     mediaQueries: {
-      desktop,
+      mobile,
     },
   } = props;
 
   let children: React.ReactNode = 'me@chancegraff.com';
 
-  if(desktop === false) {
+  if(mobile === true) {
     children = (
       <MdMailOutline />
     );

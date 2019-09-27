@@ -10,7 +10,7 @@ import Email from './Email';
 const Nav: React.FC<{}> = (props) => (
   <Media
     queries={{
-      mobile: '(max-width: 1153px)',
+      mobile: '(max-width: 800px)',
       tablet: '(min-width: 1154px) and (max-width: 1563px)',
       desktop: '(min-width: 1564px)',
     }}
