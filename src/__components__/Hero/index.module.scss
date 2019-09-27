@@ -5,7 +5,22 @@
 .hero-container {
   display: flex;
   align-items: flex-end;
-  height: 660px;
+
+  @media(max-width: $width-mobile - 1px) {
+    height: 500px;
+  }
+
+  @media(min-width: $width-mobile) and (max-width: $width-tablet - 1px) {
+    height: 600px;
+  }
+
+  @media(min-width: $width-tablet) and (max-width: $width-desktop - 1px) {
+    height: 700px;
+  }
+
+  @media(min-width: $width-desktop) {
+    height: 800px;
+  }
 
   .title-container {
     width: 80%;
@@ -16,13 +31,13 @@
     color: $color-white;
     text-shadow: -1px 0 $color-black, 0 1px $color-black, 1px 0 $color-black, 0 -1px $color-black;
 
-    @media(max-width: $width-tablet) {
-      width: 100%;
-      margin-bottom: -1.75%;
+    @media(max-width: $width-mobile - 1px) {
+      margin-bottom: -2%;
     }
 
-    @media(max-width: $width-mobile) {
-      margin-bottom: -2%;
+    @media(min-width: $width-mobile) and (max-width: $width-tablet - 1px) {
+      width: 100%;
+      margin-bottom: -1.75%;
     }
 
     svg {
@@ -36,9 +51,5 @@
         stroke-width: 2px;
       }
     }
-  }
-
-  @media(max-width: $width-mobile) {
-   height: 445px;
   }
 }

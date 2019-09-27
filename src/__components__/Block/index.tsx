@@ -6,8 +6,10 @@ import styles from './index.module.scss';
 
 const Block: React.FC<{
   color?: 'black' | 'white',
+  className?: string,
 }> = (props) => {
   const {
+    className = '',
     children,
     color = 'black',
   } = props;
@@ -19,7 +21,12 @@ const Block: React.FC<{
         styles[color],
       )}
     >
-      <div className={styles['block']}>
+      <div
+        className={cx(
+          styles['block'],
+          className,
+        )}
+      >
         {children}
       </div>
     </div>

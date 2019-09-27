@@ -8,7 +8,7 @@ $element-spacing-large: 24px;
 $element-spacing-xlarge: 32px;
 
 @mixin grid-spacing() {
-  width: 1152px;
+  width: 100%;
   margin: 0px auto;
 
   @media(max-width: $width-tablet - 1px) and (min-width: $width-desktop - 1px) {
