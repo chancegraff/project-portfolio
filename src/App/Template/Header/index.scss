@@ -1,3 +1,11 @@
-svg#chanceGraffLogo:hover path.foreground-path {
-  fill: url(#aceGradient);
+@import '__styles__/colors';
+
+svg#chanceGraffLogo {
+  &:hover path.foreground-path {
+    fill: url(#aceGradient);
+  }
+
+  &:active path.foreground-path {
+    fill: $color-white;
+  }
 }

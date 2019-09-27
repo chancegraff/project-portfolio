@@ -16,5 +16,9 @@
     &:hover {
       color: $color-primary;
     }
+
+    &:active {
+      color: $color-black;
+    }
   }
 }
