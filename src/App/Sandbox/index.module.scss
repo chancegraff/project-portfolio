@@ -1,4 +1,11 @@
+@import '__styles__/colors';
+
 .sandbox-container {
   width: 100%;
   height: 100%;
+
+  .about-container {
+    height: 300px;
+    border-top: 8px solid $color-black;
+  }
 }

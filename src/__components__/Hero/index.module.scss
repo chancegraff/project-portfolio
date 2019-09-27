@@ -1,0 +1,17 @@
+@import '__styles__/colors';
+@import '__styles__/typography';
+
+.hero-container {
+  display: flex;
+  align-items: flex-end;
+  height: 550px;
+
+  .title-container {
+    font-size: $font-size-hero;
+    line-height: 160px;
+    margin-left: -6px;
+    margin-bottom: -16px;
+    color: $color-white;
+    text-shadow: -1px 0 $color-black, 0 1px $color-black, 1px 0 $color-black, 0 -1px $color-black;
+  }
+}

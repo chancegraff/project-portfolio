@@ -3,6 +3,8 @@
 @import '__styles__/colors';
 
 .nav-container {
+  width: 100%;
+
   a {
     color: $color-black;
     line-height: $line-height-large;
@@ -14,5 +16,9 @@
     &:hover {
       color: $color-primary;
     }
+  }
+
+  .email-container {
+    float: right;
   }
 }
