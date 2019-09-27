@@ -5,7 +5,7 @@ svg#chanceGraffLogo {
     fill: url(#aceGradient);
   }
 
-  &:active path.foreground-path {
+  &:focus path.foreground-path {
     fill: $color-white;
   }
 }
