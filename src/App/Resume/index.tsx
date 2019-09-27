@@ -1,8 +1,9 @@
 import React from 'react';
 
 import Hero from '__components__/Hero';
+import Block from '__components__/Block';
 
-import { ReactComponent as ResumeSvg } from './hero.svg';
+import { ReactComponent as ResumeSvg } from '__svgs__/resume.svg';
 
 import styles from './index.module.scss';
 
@@ -12,9 +13,9 @@ const Resume: React.FC<{}> = () => {
       <Hero>
         <ResumeSvg />
       </Hero>
-      <div className={styles['about-container']}>
+      <Block>
         <span>About</span>
-      </div>
+      </Block>
     </div>
   );
 };

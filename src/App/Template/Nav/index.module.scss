@@ -13,12 +13,9 @@
     font-weight: $font-weight-xbold;
     margin-right: $element-spacing-xlarge;
 
-    &:hover {
-      color: $color-primary;
-    }
-
+    &:hover,
     &:focus {
-      color: $color-black;
+      color: $color-primary;
     }
 
     @media(max-width: $width-mobile) {
