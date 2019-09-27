@@ -26,11 +26,7 @@
     .about {
       @include grid-spacing();
 
-      padding: 64px 0px;
-
-      @media(max-width: 1024px) {
-        padding: 64px 32px;
-      }
+      padding: 64px;
     }
   }
 }

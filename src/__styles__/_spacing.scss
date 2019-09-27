@@ -6,10 +6,14 @@ $element-spacing-large: 24px;
 $element-spacing-xlarge: 32px;
 
 @mixin grid-spacing() {
-  width: 1024px;
+  width: 1152px;
   margin: 0px auto;
 
-  @media(max-width: 1024px) {
+  @media(max-width: 1153px) and (min-width: 1563px) {
     width: 100%;
+  }
+
+  @media(min-width: 1564px) {
+    width: 1564px;
   }
 }
