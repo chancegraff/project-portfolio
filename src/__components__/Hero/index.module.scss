@@ -1,5 +1,6 @@
 @import '__styles__/colors';
 @import '__styles__/typography';
+@import '__styles__/media';
 
 .hero-container {
   display: flex;
@@ -15,17 +16,17 @@
     color: $color-white;
     text-shadow: -1px 0 $color-black, 0 1px $color-black, 1px 0 $color-black, 0 -1px $color-black;
 
-    @media(max-width: 1024px) {
+    @media(max-width: $width-tablet) {
       width: 100%;
       margin-bottom: -1.75%;
     }
 
-    @media(max-width: 600px) {
+    @media(max-width: $width-mobile) {
       margin-bottom: -2%;
     }
   }
 
-  @media(max-width: 650px) {
+  @media(max-width: $width-mobile) {
    height: 445px;
   }
 }

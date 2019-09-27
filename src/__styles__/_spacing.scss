@@ -1,3 +1,5 @@
+@import '__styles__/media';
+
 $element-spacing-base: 0px;
 $element-spacing-xsmall: 4px;
 $element-spacing-small: 8px;
@@ -9,11 +11,11 @@ $element-spacing-xlarge: 32px;
   width: 1152px;
   margin: 0px auto;
 
-  @media(max-width: 1153px) and (min-width: 1563px) {
+  @media(max-width: $width-tablet - 1px) and (min-width: $width-desktop - 1px) {
     width: 100%;
   }
 
-  @media(min-width: 1564px) {
+  @media(min-width: $width-desktop) {
     width: 1564px;
   }
 }

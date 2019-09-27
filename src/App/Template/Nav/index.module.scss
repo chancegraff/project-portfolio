@@ -20,5 +20,9 @@
     &:active {
       color: $color-black;
     }
+
+    @media(max-width: $width-mobile) {
+      font-size: $font-size-medium;
+    }
   }
 }
