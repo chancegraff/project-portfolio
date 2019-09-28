@@ -1,3 +1,18 @@
+@import '__styles__/colors';
+
 .footer-container {
+  display: flex;
   height: 200px;
+
+  .logo {
+    height: 100px;
+
+    rect {
+      fill: $color-black;
+    }
+
+    path {
+      fill: $color-white;
+    }
+  }
 }

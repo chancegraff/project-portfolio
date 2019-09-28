@@ -11,11 +11,11 @@ $element-spacing-xlarge: 32px;
   width: 100%;
   margin: 0px auto;
 
-  @media(max-width: $width-tablet - 1px) and (min-width: $width-desktop - 1px) {
-    width: 100%;
+  @include responsive(sm-desktop) {
+    width: 1154px;
   }
 
-  @media(min-width: $width-desktop) {
+  @include responsive(lg-desktop) {
     width: 1564px;
   }
 }

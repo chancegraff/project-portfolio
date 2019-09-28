@@ -2,6 +2,7 @@ import React from 'react';
 
 import Hero from '__components__/Hero';
 import Block from '__components__/Block';
+import ProjectsList from '__components__/ProjectsList';
 
 import { ReactComponent as HeroSvg } from '__svgs__/splash.svg';
 import me from '__media__/me.jpg';
@@ -19,8 +20,10 @@ const Splash: React.FC<{}> = () => {
         <div className={styles['me-text']}>
           <h1 className={styles['me-title']}>Hello World</h1>
           <p className={styles['me-paragraph']}>
-            {`I'm an asexual American husband / programmer / designer / gamer / writer / cat dad, and
-            a Senior Engineer at `}
+            {`
+              I'm an asexual American husband / programmer / designer / gamer / writer / cat dad, and
+              a Senior Engineer at
+            `}
             <a
               className={styles['ha-link']}
               href="https://humanagency.org"
@@ -29,12 +32,26 @@ const Splash: React.FC<{}> = () => {
             >
               HumanAgency
             </a>
-            {` in St Louis, Missouri.
-            I'm a lifelonger programmer having started before I was a teenager, and I've spent
-            the last five years as a professional developer in the startup community.`}
+            {`
+              in St Louis, Missouri.
+              I'm a lifelonger programmer having started before I was a teenager, and I've spent
+              the last five years as a professional developer in the startup community.
+            `}
           </p>
         </div>
         <img className={styles['me-image']} src={me} alt="My face" />
+      </Block>
+      <Block
+        color="white"
+        className={styles['projects-block']}
+      >
+        <h1 className={styles['projects-title']}>Recent Projects</h1>
+        <p className={styles['projects-description']}>
+          {`
+            These are some recent projects that I've been working on. Click through to view them in action!
+          `}
+        </p>
+        <ProjectsList recent />
       </Block>
     </div>
   );

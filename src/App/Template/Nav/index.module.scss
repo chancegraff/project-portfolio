@@ -1,6 +1,7 @@
 @import '__styles__/typography';
 @import '__styles__/spacing';
 @import '__styles__/colors';
+@import '__styles__/media';
 
 .nav-container {
   width: 100%;
@@ -18,7 +19,7 @@
       color: $color-primary;
     }
 
-    @media(max-width: $width-mobile) {
+    @include responsive(mobile) {
       font-size: $font-size-medium;
     }
   }
