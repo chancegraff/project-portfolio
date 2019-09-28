@@ -37,7 +37,7 @@
     .me-image {
       width: 20%;
       margin-left: $element-spacing-xlarge;
-      filter: grayscale(100%);
+      filter: grayscale(100%) contrast(200%);
     }
 
     @include responsive(mobile) {

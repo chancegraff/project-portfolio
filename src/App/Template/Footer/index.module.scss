@@ -56,5 +56,9 @@
     path {
       fill: $color-white;
     }
+
+    path:last-of-type {
+      fill: url(#aceGradient);
+    }
   }
 }

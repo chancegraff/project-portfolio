@@ -34,8 +34,8 @@ const Splash: React.FC<{}> = () => {
             </a>
             {`
               in St Louis, Missouri.
-              I'm a lifelonger programmer having started before I was a teenager, and I've spent
-              the last five years as a professional developer in the startup community.
+              I'm a life-long programmer having started before I was a teenager, and I've spent
+              the last five years as a professional developer in the local startup community.
             `}
           </p>
         </div>
