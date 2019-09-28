@@ -11,7 +11,10 @@
     display: flex;
 
     .me-text {
-      width: 90%;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
 
       .me-title {
         margin-bottom: $element-spacing-medium;
@@ -21,14 +24,20 @@
         line-height: $line-height-large;
 
         .ha-link {
-          color: $color-primary;
+          color: $color-white;
+          text-decoration: underline;
+
+          &:hover {
+            text-decoration: none;
+          }
         }
       }
     }
 
     .me-image {
-      width: 10%;
+      width: 20%;
       margin-left: $element-spacing-xlarge;
+      filter: grayscale(100%);
     }
 
     @include responsive(mobile) {
@@ -52,16 +61,6 @@
 
       .me-image {
         width: 30%;
-      }
-    }
-
-    @include responsive(sm-desktop) {
-      .me-text {
-        width: 80%;
-      }
-
-      .me-image {
-        width: 20%;
       }
     }
   }
