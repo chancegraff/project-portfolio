@@ -1,11 +1,53 @@
+@import '__styles__/typography';
+@import '__styles__/spacing';
 @import '__styles__/colors';
 
 .footer-container {
   display: flex;
-  height: 200px;
+  margin: 0 auto;
+  padding: 64px;
+
+  @include grid-spacing;
+
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      font-size: $font-size-medium;
+      color: $color-black;
+      text-decoration: underline;
+      margin-bottom: $element-spacing-large;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .social-container {
+    margin: 0 auto;
+
+    .social-link {
+      margin-right: $element-spacing-large;
+
+      & > div > svg {
+        filter: grayscale(100%) contrast(1000%) brightness(70%);
+        border-radius: 0 !important;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
 
   .logo {
-    height: 100px;
+    height: 75px;
 
     rect {
       fill: $color-black;

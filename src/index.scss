@@ -30,15 +30,20 @@ time, mark, audio, video {
 	font: inherit;
 }
 
-html, body {
-  overflow-x: hidden;
+html {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+body {
+  height: 100%;
+  width: 100%;
   font-size: $font-size-base;
   font-family: $font-family-base;
   font-weight: $font-weight-base;
   line-height: $line-height-base;
   color: $color-black;
-  width: 100%;
-  height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
