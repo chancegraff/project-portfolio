@@ -3,6 +3,7 @@
 
 @import '__styles__/colors';
 @import '__styles__/typography';
+@import '__styles__/media';
 
 
 * {
@@ -34,18 +35,26 @@ html {
   height: 100%;
   width: 100%;
   overflow: auto;
+  overflow-x: hidden;
 }
 
 body {
   height: 100%;
   width: 100%;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color: $color-black;
   font-size: $font-size-base;
   font-family: $font-family-base;
   font-weight: $font-weight-base;
   line-height: $line-height-base;
-  color: $color-black;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+  @include responsive(lg-desktop) {
+    font-size: $font-size-medium;
+    line-height: $line-height-medium;
+  }
 }
 
 div#root {
@@ -67,12 +76,22 @@ h1 {
   font-size: $font-size-xlarge;
   line-height: $line-height-xlarge;
   font-weight: $font-weight-xbold;
+
+  @include responsive(lg-desktop) {
+    font-size: $font-size-xxlarge;
+    line-height: $line-height-xxlarge;
+  }
 }
 
 h2 {
   font-size: $font-size-large;
   line-height: $line-height-large;
   font-weight: $font-weight-bold;
+
+  @include responsive(lg-desktop) {
+    font-size: $font-size-xlarge;
+    line-height: $line-height-xlarge;
+  }
 }
 
 h3 {
@@ -80,18 +99,33 @@ h3 {
   line-height: $line-height-medium;
   font-weight: $font-weight-light;
   font-style: oblique;
+
+  @include responsive(lg-desktop) {
+    font-size: $font-size-large;
+    line-height: $line-height-large;
+  }
 }
 
 h4 {
   font-size: $font-size-small;
   line-height: $line-height-small;
   font-weight: $font-weight-xbold;
+
+  @include responsive(lg-desktop) {
+    font-size: $font-size-medium;
+    line-height: $line-height-medium;
+  }
 }
 
 h5 {
   font-size: $font-size-xsmall;
   line-height: $line-height-xsmall;
   font-weight: $font-weight-bold;
+
+  @include responsive(lg-desktop) {
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+  }
 }
 
 h6 {
@@ -99,4 +133,9 @@ h6 {
   line-height: $line-height-xsmall;
   font-weight: $font-weight-light;
   font-style: oblique;
+
+  @include responsive(lg-desktop) {
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+  }
 }

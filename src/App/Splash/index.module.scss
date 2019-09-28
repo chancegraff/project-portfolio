@@ -10,11 +10,31 @@
   .me-block {
     display: flex;
 
+    @include responsive(mobile) {
+      flex-direction: column-reverse;
+    }
+
     .me-text {
-      width: 80%;
+      flex-shrink: 1;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+
+      @include responsive(mobile) {
+        width: 100%;
+      }
+
+      @include responsive(tablet) {
+        width: 70%;
+      }
+
+      @include responsive(sm-desktop) {
+        width: 65%;
+      }
+
+      @include responsive(lg-desktop) {
+        width: 60%;
+      }
 
       .me-title {
         margin-bottom: $element-spacing-medium;
@@ -22,6 +42,10 @@
 
       .me-paragraph {
         line-height: $line-height-large;
+
+        @include responsive(lg-desktop) {
+          line-height: $line-height-xlarge;
+        }
 
         .ha-link {
           color: $color-white;
@@ -35,32 +59,28 @@
     }
 
     .me-image {
-      width: 20%;
+      min-width: 180px;
+      min-height: 226px;
+      flex-shrink: 0;
       margin-left: $element-spacing-xlarge;
       filter: grayscale(100%) contrast(200%);
-    }
 
-    @include responsive(mobile) {
-      flex-direction: column-reverse;
-
-      .me-text {
-        width: 100%;
-      }
-
-      .me-image {
+      @include responsive(mobile) {
         width: 100%;
         margin-left: 0px;
         margin-bottom: $element-spacing-xlarge;
       }
-    }
 
-    @include responsive(tablet) {
-      .me-text {
-        width: 70%;
+      @include responsive(tablet) {
+        width: 30%;
       }
 
-      .me-image {
-        width: 30%;
+      @include responsive(sm-desktop) {
+        width: 35%;
+      }
+
+      @include responsive(lg-desktop) {
+        width: 40%;
       }
     }
   }
