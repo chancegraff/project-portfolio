@@ -1,6 +1,7 @@
 @import '__styles__/typography';
 @import '__styles__/spacing';
 @import '__styles__/colors';
+@import '__styles__/media';
 
 .footer-container {
   display: flex;
@@ -26,6 +27,10 @@
       &:last-of-type {
         margin-bottom: 0;
       }
+
+      @include responsive(mobile) {
+        font-size: $font-size-base;
+      }
     }
   }
 
@@ -40,9 +45,16 @@
         border-radius: 0 !important;
       }
 
+      @include responsive(mobile) {
+        width: 30px !important;
+        height: 30px !important;
+        margin-right: $element-spacing-medium;
+      }
+
       &:last-of-type {
         margin-right: 0;
       }
+
     }
   }
 
@@ -59,6 +71,10 @@
 
     path:last-of-type {
       fill: url(#aceGradient);
+    }
+
+    @include responsive(mobile) {
+      height: 50px;
     }
   }
 }
