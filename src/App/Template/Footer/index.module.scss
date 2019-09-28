@@ -41,7 +41,7 @@
       margin-right: $element-spacing-large;
 
       & > div > svg {
-        filter: grayscale(100%) contrast(1000%) brightness(70%);
+        filter: grayscale(100%) contrast(1000%) brightness(0%);
         border-radius: 0 !important;
       }
 
