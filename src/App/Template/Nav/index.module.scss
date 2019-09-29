@@ -13,10 +13,10 @@
     font-family: $font-family-title;
     font-weight: $font-weight-xbold;
     margin-right: $element-spacing-xlarge;
+    border-bottom: 3px solid transparent;
 
-    &:hover,
-    &:focus {
-      color: $color-primary;
+    &:hover {
+      border-bottom: 3px solid $color-black;
     }
 
     @include responsive(mobile) {
