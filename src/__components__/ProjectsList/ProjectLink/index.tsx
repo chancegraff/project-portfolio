@@ -15,7 +15,8 @@ const ProjectLink: React.FC<{
   return (
     <div className={styles['project-link-container']}>
       <Link className={styles['project-link']} to={generateProjectUrl(project.slug)}>
-        {project.name}
+        <h2 className={styles['project-title']}>{project.name}</h2>
+        <p className={styles['project-description']}>{project.shortDescription}</p>
       </Link>
     </div>
   );

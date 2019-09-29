@@ -11,5 +11,16 @@
     background-color: $color-black;
     color: $color-white;
     border-radius: 2px;
+
+    .project-title {
+      text-transform: capitalize;
+      margin-bottom: $element-spacing-medium;
+    }
+
+    .project-description {}
+
+    &:hover .project-title {
+      text-decoration: underline;
+    }
   }
 }
