@@ -4,7 +4,7 @@ import Hero from '__components__/Hero';
 import Block from '__components__/Block';
 import ProjectsList from '__components__/ProjectsList';
 
-import { ReactComponent as SandboxSvg } from '__svgs__/sandbox.svg';
+import { ReactComponent as SandboxSvg } from '__media__/sandbox.svg';
 
 import styles from './index.module.scss';
 

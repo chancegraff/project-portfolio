@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { SocialIcon } from 'react-social-icons';
 
-import { ReactComponent as Logo } from '__svgs__/logo.svg';
+import { ReactComponent as Logo } from '__media__/logo.svg';
 
 import styles from './index.module.scss';
 

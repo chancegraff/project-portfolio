@@ -3,7 +3,7 @@ import React from 'react';
 import Hero from '__components__/Hero';
 import Block from '__components__/Block';
 
-import { ReactComponent as UnfoundSvg } from '__svgs__/unfound.svg';
+import { ReactComponent as UnfoundSvg } from '__media__/unfound.svg';
 
 import styles from './index.module.scss';
 

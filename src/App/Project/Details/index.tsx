@@ -3,7 +3,7 @@ import React from 'react';
 import Hero from '__components__/Hero';
 import Block from '__components__/Block';
 
-import { ReactComponent as SandboxSvg } from '__svgs__/sandbox.svg';
+import { ReactComponent as SandboxSvg } from '__media__/sandbox.svg';
 
 import styles from './index.module.scss';
 

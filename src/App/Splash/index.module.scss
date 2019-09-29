@@ -85,6 +85,10 @@
     .projects-description {
       line-height: $line-height-large;
       margin-bottom: $element-spacing-large;
+
+      @include responsive(lg-desktop) {
+        line-height: $line-height-xlarge;
+      }
     }
   }
 }

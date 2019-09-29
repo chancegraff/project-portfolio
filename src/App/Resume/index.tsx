@@ -3,7 +3,7 @@ import React from 'react';
 import Hero from '__components__/Hero';
 import Block from '__components__/Block';
 
-import { ReactComponent as ResumeSvg } from '__svgs__/resume.svg';
+import { ReactComponent as ResumeSvg } from '__media__/resume.svg';
 
 import styles from './index.module.scss';
 
