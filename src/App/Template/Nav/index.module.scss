@@ -4,9 +4,11 @@
 @import '__styles__/media';
 
 .nav-container {
+  display: flex;
   width: 100%;
 
   a {
+    display: block;
     color: $color-black;
     line-height: $line-height-large;
     font-size: $font-size-large;
