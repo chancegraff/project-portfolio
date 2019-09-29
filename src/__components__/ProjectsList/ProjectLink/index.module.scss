@@ -1,8 +1,17 @@
 @import '__styles__/spacing';
 @import '__styles__/colors';
+@import '__styles__/media';
 
 .project-link-container {
   width: 33%;
+
+  @include responsive(mobile) {
+    width: 100%;
+  }
+
+  @include responsive(tablet) {
+    width: 50%;
+  }
 
   .project-link {
     display: block;
