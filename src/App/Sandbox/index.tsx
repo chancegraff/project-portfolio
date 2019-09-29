@@ -7,13 +7,20 @@ import { ReactComponent as SandboxSvg } from '__svgs__/sandbox.svg';
 
 import styles from './index.module.scss';
 
-const Sandbox: React.FC<{}> = () => {
+
+const Sandbox: React.FC<{
+}> = (props) => {
   return (
     <div className={styles['sandbox-container']}>
       <Hero>
         <SandboxSvg />
       </Hero>
       <Block>
+        <span>About</span>
+      </Block>
+      <Block
+        color="white"
+      >
         <span>About</span>
       </Block>
     </div>

@@ -28,12 +28,8 @@
         width: 70%;
       }
 
-      @include responsive(sm-desktop) {
+      @include responsive(all-desktop) {
         width: 65%;
-      }
-
-      @include responsive(lg-desktop) {
-        width: 60%;
       }
 
       .me-title {
@@ -75,12 +71,8 @@
         width: 30%;
       }
 
-      @include responsive(sm-desktop) {
+      @include responsive(all-desktop) {
         width: 35%;
-      }
-
-      @include responsive(lg-desktop) {
-        width: 40%;
       }
     }
   }

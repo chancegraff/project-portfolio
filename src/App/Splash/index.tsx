@@ -51,7 +51,7 @@ const Splash: React.FC<{}> = () => {
             These are some recent projects that I've been working on. Click through to view them in action!
           `}
         </p>
-        <ProjectsList recent />
+        <ProjectsList visibleProjects={3} />
       </Block>
     </div>
   );

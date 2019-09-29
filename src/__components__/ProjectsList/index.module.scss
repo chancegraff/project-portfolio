@@ -1,1 +1,7 @@
-.projects-list-container {}
+@import '__styles__/spacing';
+
+.projects-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -$element-spacing-medium;
+}

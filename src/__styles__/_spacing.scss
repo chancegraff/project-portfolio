@@ -11,7 +11,11 @@ $element-spacing-xlarge: 32px;
   width: 100%;
   margin: 0px auto;
 
-  @include responsive(all-desktop) {
+  @include responsive(sm-desktop) {
     width: 1154px;
+  }
+
+  @include responsive(lg-desktop) {
+    width: 1564px;
   }
 }

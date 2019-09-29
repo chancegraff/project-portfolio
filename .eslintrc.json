@@ -16,6 +16,8 @@
     "jest": true
   },
   "rules": {
+    "react/jsx-props-no-spreading": 0,
+    "import/prefer-default-export": 0,
     "dot-notation": 0,
     "keyword-spacing": [
       0,
@@ -35,6 +37,12 @@
     ],
     "react/prop-types": 0,
     "@typescript-eslint/no-unused-vars": 0,
+    "@typescript-eslint/interface-name-prefix": [
+      2,
+      {
+        "prefixWithI": "always"
+      }
+    ],
     "@typescript-eslint/member-delimiter-style": [
       0,
       {

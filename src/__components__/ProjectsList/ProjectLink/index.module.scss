@@ -1,0 +1,15 @@
+@import '__styles__/spacing';
+@import '__styles__/colors';
+
+.project-link-container {
+  width: 33%;
+
+  .project-link {
+    display: block;
+    margin: $element-spacing-medium;
+    padding: $element-spacing-large;
+    background-color: $color-black;
+    color: $color-white;
+    border-radius: 2px;
+  }
+}
