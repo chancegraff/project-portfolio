@@ -1,0 +1,10 @@
+@import '__styles__/colors';
+@import '__styles__/spacing';
+
+.not-found-container {
+  .not-found-title {
+    margin-bottom: $element-spacing-large;
+  }
+
+  .not-found-paragraph {}
+}

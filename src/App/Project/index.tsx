@@ -1,40 +1,35 @@
 import React from 'react';
-import { RouteComponentProps } from 'react-router';
+import { Redirect, RouteComponentProps } from 'react-router-dom';
 
-import Hero from '__components__/Hero';
-import Block from '__components__/Block';
+import allProjects from '__data__/projects';
 
-import { ReactComponent as SandboxSvg } from '__svgs__/sandbox.svg';
-
-import styles from './index.module.scss';
+import Details from './Details';
 
 
-const ProjectPage: React.FC<RouteComponentProps<{
+const Project: React.FC<RouteComponentProps<{
   projectSlug: string,
-}> & {
-  project: IProject,
-}> = (props) => {
+}>> = (props) => {
   const {
-    project,
+    match: {
+      params: {
+        projectSlug,
+      },
+    },
   } = props;
 
-  return (
-    <div className={styles['project-container']}>
-      <Hero>
-        <SandboxSvg />
-      </Hero>
-      <Block className={styles['description-block']}>
-        <h1 className={styles['description-title']}>{project.name}</h1>
-        <p className={styles['description-paragraph']}>{project.description}</p>
-      </Block>
-      <Block
-        color="white"
-        className={styles['project-block']}
-      >
-        Project!
-      </Block>
-    </div>
+  const project = allProjects.find((currentProject) => currentProject.slug === projectSlug);
+
+  let renderResult = (
+    <Redirect to="/404" />
   );
+
+  if(project) {
+    renderResult = (
+      <Details project={project} />
+    );
+  }
+
+  return renderResult;
 };
 
-export default ProjectPage;
+export default Project;
