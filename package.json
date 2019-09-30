@@ -10,6 +10,7 @@
     "@types/react": "^16.9.3",
     "@types/react-dom": "^16.9.1",
     "@types/react-router-dom": "^5.1.0",
+    "apollo-server-express": "^2.9.4",
     "body-parser": "^1.19.0",
     "change-case": "^3.1.0",
     "classnames": "^2.2.6",
@@ -31,10 +32,10 @@
     "typescript": "^3.6.3"
   },
   "scripts": {
-    "start": "node server/index.js",
+    "start": "node server.js",
     "heroku-postbuild": "npm install && npm install --only=dev --no-shrinkwrap && npm run build",
     "start:dev": "concurrently --kill-others-on-fail \"yarn start:web\" \"yarn start:api\"",
-    "start:api": "nodemon server/index.js",
+    "start:api": "nodemon server.js",
     "start:web": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
