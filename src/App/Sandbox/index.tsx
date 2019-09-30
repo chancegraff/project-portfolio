@@ -17,6 +17,7 @@ const Sandbox: React.FC<{
     query {
       projects {
         name
+        slug
         shortDescription
       }
     }

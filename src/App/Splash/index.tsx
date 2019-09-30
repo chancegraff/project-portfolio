@@ -17,6 +17,7 @@ const Splash: React.FC<{}> = () => {
     query {
       projects {
         name
+        slug
         shortDescription
       }
     }

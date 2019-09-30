@@ -27,12 +27,18 @@ const ProjectsList: React.FC<{
         loadingNode={<span>Loading</span>}
         errorNode={<span>Error</span>}
       >
-        {({ projects }): React.ReactNodeArray => projects.map((project) => (
-          <ProjectLink
-            key={project.name}
-            project={project}
-          />
-        ))}
+        {({ projects }): React.ReactNodeArray => {
+          const {
+            visibleProjects = projects.length,
+          } = props;
+
+          return projects.slice(0, visibleProjects).map((project) => (
+            <ProjectLink
+              key={project.name}
+              project={project}
+            />
+          ));
+        }}
       </QueryHandler>
     </div>
   );

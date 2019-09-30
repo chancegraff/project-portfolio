@@ -5,6 +5,7 @@ const typeDefs = gql`
     name: String!
     description: String!
     shortDescription: String!
+    slug: String!
   }
 
   type Query {
