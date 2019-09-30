@@ -18,7 +18,7 @@
   "scripts": {
     "start": "node server.js",
     "start:server": "nodemon server.js",
-    "migrate:live": "heroku run sequelize db:migrate --env production -m --app chance-graff",
+    "heroku:bash": "heroku run bash",
     "migrate:local": "sequelize db:migrate"
   }
 }
