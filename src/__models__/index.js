@@ -1,9 +1,24 @@
 const Sequelize = require('sequelize');
 
-const database = new Sequelize({
-  dialect: 'sqlite',
-  storage: './db.sqlite',
-});
+let database;
+
+if(process.env.NODE_ENV === 'production') {
+  database = new Sequelize(
+    process.env.DATABASE_URL,
+    {
+      dialect: 'postgres',
+    }
+  );
+} else {
+  database = new Sequelize(
+    process.env.DATABASE,
+    process.env.DATABASE_USER,
+    process.env.DATABASE_PASSWORD,
+    {
+      dialect: 'postgres',
+    },
+  );
+}
 
 const models = {
   Project: database.import('./project'),

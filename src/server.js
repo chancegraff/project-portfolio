@@ -1,17 +1,14 @@
+const path = require('path');
 const cors = require('cors');
 const express = require('express');
 const bodyParser = require('body-parser');
 const { ApolloServer } = require('apollo-server-express');
-const path = require('path');
-const { times } = require('lodash');
-const faker = require('faker');
-const {models, database} = require('./__models__');
 
+const { models, database } = require('./__models__');
 const typeDefs = require('./schema');
 const resolvers = require('./resolvers');
 
 const port = process.env.PORT || 5000;
-
 
 const apollo = new ApolloServer({
   typeDefs,
