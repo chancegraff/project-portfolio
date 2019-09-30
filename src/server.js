@@ -6,7 +6,7 @@ const faker = require('faker');
 const { times } = require('lodash');
 const { ApolloServer } = require('apollo-server-express');
 
-const { models, database } = require('./__models__');
+const database = require('./__models__');
 const typeDefs = require('./schema');
 const resolvers = require('./resolvers');
 const dotenv = require('dotenv');
@@ -19,8 +19,7 @@ const apollo = new ApolloServer({
   typeDefs,
   resolvers,
   context: {
-    database,
-    models
+    database
   }
 });
 
@@ -43,9 +42,9 @@ if(process.env.NODE_ENV === 'production') {
   });
 }
 
-database.sync().then(() => models.Project.count().then((count) => {
+database.sequelize.sync().then(() => database.project.count().then((count) => {
   if(process.env.NODE_ENV === 'development' && count < 10) {
-    models.Project.bulkCreate(
+    database.project.bulkCreate(
       times(10, () => ({
         name: faker.lorem.words(),
         description: faker.lorem.words(),

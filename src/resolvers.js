@@ -1,7 +1,7 @@
 module.exports = {
   Query: {
-    projects: (parent, args, { models }, info) => {
-      return models.Project.findAll()
+    projects: (parent, args, { database }, info) => {
+      return database.project.findAll()
     },
   },
 };
