@@ -41,7 +41,7 @@
     "typescript": "^3.6.3"
   },
   "scripts": {
-    "start": "npm explore server -- npm run server",
+    "start": "node server/server.js",
     "heroku-postbuild": "npm install && npm install --only=dev --no-shrinkwrap && npm run build",
     "start:local": "concurrently --kill-others-on-fail \"yarn start:web\" \"yarn --cwd server start:server\"",
     "start:web": "react-scripts start",
