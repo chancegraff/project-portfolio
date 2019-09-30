@@ -1,0 +1,24 @@
+{
+  "name": "chance-graff-server",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "apollo-server": "^2.9.4",
+    "apollo-server-express": "^2.9.4",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "graphql": "^14.5.8",
+    "lodash": "^4.17.15",
+    "pg": "^7.12.1",
+    "sequelize": "^5.19.1",
+    "sqlite": "^3.0.3"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "start:server": "nodemon server.js",
+    "migrate:live": "heroku run sequelize db:migrate --env production -m --app chance-graff",
+    "migrate:local": "sequelize db:migrate"
+  }
+}

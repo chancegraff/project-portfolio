@@ -41,12 +41,10 @@
     "typescript": "^3.6.3"
   },
   "scripts": {
-    "start": "node src/server.js",
+    "start": "npm explore server -- npm run server",
     "heroku-postbuild": "npm install && npm install --only=dev --no-shrinkwrap && npm run build",
-    "start:dev": "concurrently --kill-others-on-fail \"yarn start:web\" \"yarn start:api\"",
-    "start:api": "nodemon src/server.js",
+    "start:local": "concurrently --kill-others-on-fail \"yarn start:web\" \"yarn --cwd server start:server\"",
     "start:web": "react-scripts start",
-    "migrate:live": "heroku run sequelize db:migrate --env production -m --app chance-graff",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
