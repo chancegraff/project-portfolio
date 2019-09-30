@@ -2,3 +2,5 @@ src/serviceWorker.js
 src/**/*.test.tsx
 server.js
 schema.js
+resolvers.js
+__models__

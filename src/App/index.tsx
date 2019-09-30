@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import {
   Route,
@@ -15,17 +15,6 @@ import NotFound from './NotFound';
 
 
 const App: React.FC<{}> = () => {
-  const fetchData = async () => {
-    const response = await fetch('/api/hello');
-    const body = await response.json();
-
-    console.log(body);
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
   return (
     <Template>
       <Switch>

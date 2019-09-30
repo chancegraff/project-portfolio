@@ -1,10 +1,14 @@
 const { gql } = require('apollo-server');
 
-const typeDes = gql`
+const typeDefs = gql`
   type Project {
     name: String!
     description: String!
     shortDescription: String!
+  }
+
+  type Query {
+    projects: [Project!]!
   }
 `;
 
