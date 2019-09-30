@@ -1,4 +1,6 @@
 import React from 'react';
+import { useQuery } from '@apollo/react-hooks';
+import { gql } from 'apollo-boost';
 
 import Hero from '__components__/Hero';
 import Block from '__components__/Block';
@@ -11,6 +13,15 @@ import styles from './index.module.scss';
 
 
 const Splash: React.FC<{}> = () => {
+  const query = useQuery(gql(`
+    query {
+      projects {
+        name
+        shortDescription
+      }
+    }
+  `));
+
   return (
     <div className={styles['splash-container']}>
       <Hero>
@@ -51,7 +62,7 @@ const Splash: React.FC<{}> = () => {
             These are some recent projects that I've been working on. Click through to view them in action!
           `}
         </p>
-        <ProjectsList visibleProjects={3} />
+        <ProjectsList projectsQuery={query} visibleProjects={3} />
       </Block>
     </div>
   );

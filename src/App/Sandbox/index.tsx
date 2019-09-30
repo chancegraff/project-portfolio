@@ -1,4 +1,6 @@
 import React from 'react';
+import { useQuery } from '@apollo/react-hooks';
+import { gql } from 'apollo-boost';
 
 import Hero from '__components__/Hero';
 import Block from '__components__/Block';
@@ -11,6 +13,15 @@ import styles from './index.module.scss';
 
 const Sandbox: React.FC<{
 }> = () => {
+  const query = useQuery(gql(`
+    query {
+      projects {
+        name
+        shortDescription
+      }
+    }
+  `));
+
   return (
     <div className={styles['sandbox-container']}>
       <Hero>
@@ -22,7 +33,7 @@ const Sandbox: React.FC<{
       <Block
         color="white"
       >
-        <ProjectsList />
+        <ProjectsList projectsQuery={query} />
       </Block>
     </div>
   );
