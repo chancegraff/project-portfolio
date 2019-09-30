@@ -46,6 +46,7 @@
     "start:dev": "concurrently --kill-others-on-fail \"yarn start:web\" \"yarn start:api\"",
     "start:api": "nodemon src/server.js",
     "start:web": "react-scripts start",
+    "migrate:live": "heroku run sequelize db:migrate --env production -m --app chance-graff",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

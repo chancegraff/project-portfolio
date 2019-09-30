@@ -17,6 +17,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
       allowNull: false,
     },
+    herokuUrl: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     shortDescription: {
       type: DataTypes.TEXT,
       allowNull: false,

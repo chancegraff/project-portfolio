@@ -6,6 +6,7 @@ const typeDefs = gql`
     description: String!
     shortDescription: String!
     slug: String!
+    herokuUrl: String!
   }
 
   type Query {

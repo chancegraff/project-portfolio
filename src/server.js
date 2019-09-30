@@ -6,7 +6,7 @@ const faker = require('faker');
 const { times } = require('lodash');
 const { ApolloServer } = require('apollo-server-express');
 
-const database = require('./__models__');
+const database = require('./models');
 const typeDefs = require('./schema');
 const resolvers = require('./resolvers');
 const dotenv = require('dotenv');

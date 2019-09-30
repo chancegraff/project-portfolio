@@ -3,4 +3,5 @@ src/**/*.test.tsx
 server.js
 schema.js
 resolvers.js
-__models__
+models
+migrations
