@@ -8,10 +8,12 @@ import styles from './index.module.scss';
 import ProjectLink from './ProjectLink';
 
 
+interface IData {
+  projects: Array<IProject>,
+}
+
 const ProjectsList: React.FC<{
-  projectsQuery: QueryResult<{
-    projects: Array<IProject>,
-  }>,
+  projectsQuery: QueryResult<IData>,
   visibleProjects?: number,
 }> = (props) => {
   const {
@@ -20,12 +22,12 @@ const ProjectsList: React.FC<{
 
   return (
     <div className={styles['projects-list-container']}>
-      <QueryHandler
+      <QueryHandler<IData>
         query={projectsQuery}
         loadingNode={<span>Loading</span>}
         errorNode={<span>Error</span>}
       >
-        {({ projects }): React.ReactChildren => projects.map((project: IProject) => (
+        {({ projects }): React.ReactNodeArray => projects.map((project) => (
           <ProjectLink
             key={project.name}
             project={project}
