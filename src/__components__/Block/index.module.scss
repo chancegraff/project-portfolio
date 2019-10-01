@@ -2,8 +2,6 @@
 @import '__styles__/colors';
 
 .block-container {
-  min-height: 300px;
-
   .block {
     @include grid-spacing();
 

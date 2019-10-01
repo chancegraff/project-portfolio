@@ -7,6 +7,9 @@ import { ReactComponent as ResumeSvg } from '__media__/resume.svg';
 
 import styles from './index.module.scss';
 
+
+// TODO Implement actual resume
+
 const Resume: React.FC<{}> = () => {
   return (
     <div className={styles['resume-container']}>
@@ -14,7 +17,10 @@ const Resume: React.FC<{}> = () => {
         <ResumeSvg />
       </Hero>
       <Block>
-        <span>About</span>
+        <span>First page!</span>
+      </Block>
+      <Block color="white">
+        <span>Second page!</span>
       </Block>
     </div>
   );

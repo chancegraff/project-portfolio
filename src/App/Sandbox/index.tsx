@@ -32,7 +32,14 @@ const Sandbox: React.FC<{
         <SandboxSvg />
       </Hero>
       <Block>
-        <span>About</span>
+        <h1 className={styles['sandbox-title']}>Projects In Action</h1>
+        <p className={styles['sandbox-description']}>
+          {`
+            I've created this page with the intent of displaying various projects that I've created.
+            Each project has a dedicated page in which it will actually display the application in action.
+            You can click through to the project pages to play around with them yourself.
+          `}
+        </p>
       </Block>
       <Block
         color="white"

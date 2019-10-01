@@ -7,6 +7,11 @@ import { ReactComponent as Logo } from '__media__/logo.svg';
 import styles from './index.module.scss';
 
 
+// TODO Fix footer styling
+// – Make links smaller, stacked tighter, and give small title (desktop and mobile)
+// – Add dribble social icon, make socials smaller (desktop and mobile)
+// – Maybe remove logo (mobile)
+
 const Footer: React.FC<{}> = (props) => (
   <footer className={styles['footer-container']}>
     <div className={styles['nav-container']}>
