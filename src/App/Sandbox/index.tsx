@@ -16,6 +16,7 @@ const Sandbox: React.FC<{
   const query = useQuery(gql(`
     query {
       projects {
+        id
         name
         slug
         shortDescription

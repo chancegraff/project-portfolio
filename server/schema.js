@@ -2,6 +2,7 @@ const { gql } = require('apollo-server');
 
 const typeDefs = gql`
   type Project {
+    id: ID!
     name: String!
     description: String!
     shortDescription: String!
@@ -11,6 +12,7 @@ const typeDefs = gql`
 
   type Query {
     projects: [Project!]!
+    project(id: ID!): Project!
   }
 `;
 

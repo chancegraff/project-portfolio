@@ -1,5 +1,6 @@
 const path = require('path');
 const cors = require('cors');
+const dotenv = require('dotenv');
 const express = require('express');
 const bodyParser = require('body-parser');
 const faker = require('faker');
@@ -9,9 +10,10 @@ const { ApolloServer } = require('apollo-server-express');
 const database = require('./models');
 const typeDefs = require('./schema');
 const resolvers = require('./resolvers');
-const dotenv = require('dotenv');
 
-dotenv.config()
+dotenv.config({
+  path: path.resolve(__dirname, '../.env'),
+});
 
 const port = process.env.PORT || 5000;
 
@@ -49,6 +51,7 @@ database.sequelize.sync().then(() => database.project.count().then((count) => {
         name: faker.lorem.words(),
         description: faker.lorem.words(),
         shortDescription: faker.lorem.words(),
+        herokuUrl: faker.internet.url(),
         slug: faker.lorem.slug(),
       }))
     );

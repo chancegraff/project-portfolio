@@ -19,6 +19,7 @@
     "start": "node server.js",
     "start:server": "nodemon server.js",
     "heroku:bash": "heroku run bash",
-    "migrate:local": "sequelize db:migrate"
+    "migrate:sync": "sequelize db:migrate",
+    "migrate:create": "sequelize migration:generate"
   }
 }
