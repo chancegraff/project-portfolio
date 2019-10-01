@@ -13,19 +13,11 @@
     "@types/react-dom": "^16.9.1",
     "@types/react-router-dom": "^5.1.0",
     "apollo-boost": "^0.4.4",
-    "apollo-server": "^2.9.4",
-    "apollo-server-express": "^2.9.4",
-    "body-parser": "^1.19.0",
     "change-case": "^3.1.0",
     "classnames": "^2.2.6",
-    "concurrently": "^4.1.2",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "faker": "^4.1.0",
     "graphql": "^14.5.8",
     "lodash": "^4.17.15",
     "node-sass": "^4.12.0",
-    "pg": "^7.12.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-icons": "^3.7.0",
@@ -34,16 +26,14 @@
     "react-router-dom": "^5.1.0",
     "react-scripts": "3.1.2",
     "react-social-icons": "^4.1.0",
-    "sequelize": "^5.19.1",
     "sequelize-cli": "^5.5.1",
-    "sqlite": "^3.0.3",
     "typeface-halant": "^0.0.71",
     "typeface-nunito-sans": "^0.0.72",
     "typescript": "^3.6.3"
   },
   "scripts": {
     "start": "node server/server.js",
-    "heroku-postbuild": "npm install && npm install --only=dev --no-shrinkwrap && npm run build",
+    "heroku-postbuild": "(yarn install && yarn install --only=dev --no-shrinkwrap && yarn build); (cd server && yarn install);",
     "start:local": "concurrently --kill-others-on-fail \"yarn start:web\" \"yarn --cwd server start:server\"",
     "start:web": "react-scripts start",
     "build": "react-scripts build",
@@ -72,6 +62,8 @@
     "@typescript-eslint/parser": "^2.3.1",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-react": "^1.1.7",
-    "eslint-plugin-import": "^2.18.2"
+    "eslint-plugin-import": "^2.18.2",
+    "concurrently": "^4.1.2",
+    "faker": "^4.1.0"
   }
 }
