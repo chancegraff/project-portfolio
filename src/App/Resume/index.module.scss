@@ -1,8 +1,69 @@
 @import '__styles__/typography';
 @import '__styles__/spacing';
 @import '__styles__/colors';
+@import '__styles__/media';
 
 .resume-container {
   width: 100%;
   height: 100%;
+
+  .resume-title {
+    margin-bottom: $element-spacing-medium;
+  }
+
+  .resume-paragraph {
+    line-height: $line-height-large;
+
+    @include responsive(lg-desktop) {
+      line-height: $line-height-xlarge;
+    }
+  }
+
+  .resume-list {
+    list-style: inside;
+
+    & > li {
+      margin-bottom: $element-spacing-large;
+      padding-left: $element-spacing-medium;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .resume-expertise {
+    display: flex;
+    margin: $element-spacing-xlarge 0;
+
+    .resume-list {
+      width: 33%;
+
+      & > li {
+        margin-bottom: $element-spacing-medium;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .resume-position {
+    display: block;
+    margin: $element-spacing-xlarge 0 $element-spacing-large 0;
+
+    &:first-of-type {
+      margin: 0 0 $element-spacing-large 0;
+    }
+  }
+
+  .resume-education {
+    display: block;
+    margin-bottom: $element-spacing-large;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
 }

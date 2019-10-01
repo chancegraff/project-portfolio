@@ -64,6 +64,11 @@ div#root {
   min-height: 100%;
 }
 
+strong {
+  font-weight: $font-weight-xbold;
+  font-style: oblique;
+}
+
 a {
   text-decoration: none;
 }
