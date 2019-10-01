@@ -1,10 +1,28 @@
+@import '__styles__/typography';
+@import '__styles__/spacing';
+@import '__styles__/media';
+
+
 .details-container {
   width: 100%;
 
   .description-block {
-    .description-title {}
+    .description-title {
+      margin-bottom: $element-spacing-medium;
+    }
 
-    .description-paragraph {}
+    .description-paragraph {
+      width: 60%;
+      line-height: $line-height-large;
+
+      @include responsive(mobile) {
+        width: 100%;
+      }
+
+      @include responsive(lg-desktop) {
+        line-height: $line-height-xlarge;
+      }
+    }
   }
 
   .details-block {
