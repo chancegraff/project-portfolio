@@ -9,10 +9,12 @@
 
   .details-block {
     width: 100%;
+    height: 600px;
+    overflow: hidden;
 
     .details-frame {
+      height: 100%;
       width: 100%;
-      min-height: 600px;
     }
   }
 }
