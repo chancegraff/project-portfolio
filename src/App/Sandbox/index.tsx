@@ -11,18 +11,20 @@ import { ReactComponent as SandboxSvg } from '__media__/sandbox.svg';
 import styles from './index.module.scss';
 
 
+const getProjects = gql(`
+  query {
+    projects {
+      id
+      name
+      slug
+      shortDescription
+    }
+  }
+`);
+
 const Sandbox: React.FC<{
 }> = () => {
-  const query = useQuery(gql(`
-    query {
-      projects {
-        id
-        name
-        slug
-        shortDescription
-      }
-    }
-  `));
+  const query = useQuery(getProjects);
 
   return (
     <div className={styles['sandbox-container']}>

@@ -12,17 +12,19 @@ import me from '__media__/me.jpg';
 import styles from './index.module.scss';
 
 
-const Splash: React.FC<{}> = () => {
-  const query = useQuery(gql(`
-    query {
-      projects {
-        id
-        name
-        slug
-        shortDescription
-      }
+const getProjects = gql(`
+  query {
+    projects {
+      id
+      name
+      slug
+      shortDescription
     }
-  `));
+  }
+`);
+
+const Splash: React.FC<{}> = () => {
+  const query = useQuery(getProjects);
 
   return (
     <div className={styles['splash-container']}>
