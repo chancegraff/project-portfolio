@@ -44,20 +44,22 @@ if(process.env.NODE_ENV === 'production') {
   });
 }
 
-database.sequelize.sync().then(() => database.project.count().then((count) => {
-  if(process.env.NODE_ENV === 'development' && count < 10) {
-    database.project.bulkCreate(
-      times(10, () => ({
-        name: faker.lorem.words(),
-        description: faker.lorem.words(),
-        shortDescription: faker.lorem.words(),
-        herokuUrl: faker.internet.url(),
-        slug: faker.lorem.slug(),
-      }))
-    );
-  }
+database.sequelize.sync().then(() => {
+  return database.Project.count().then((count) => {
+    if(process.env.NODE_ENV === 'development' && count < 10) {
+      database.Project.bulkCreate(
+        times(10, () => ({
+          name: faker.lorem.words(),
+          description: faker.lorem.words(),
+          shortDescription: faker.lorem.words(),
+          herokuUrl: faker.internet.url(),
+          slug: faker.lorem.slug(),
+        }))
+      );
+    }
 
-  app.listen(port, () => {
-    console.log(`Listening on port ${port}`)
+    app.listen(port, () => {
+      console.log(`Listening on port ${port}`)
+    });
   });
-}));
+});

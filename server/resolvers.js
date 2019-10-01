@@ -3,10 +3,10 @@ const { UserInputError } = require('apollo-server');
 module.exports = {
   Query: {
     projects: (parent, args, { database }, info) => {
-      return database.project.findAll();
+      return database.Project.findAll();
     },
     project: (parent, { slug }, { database }, info) => {
-      return database.project.findOne({
+      return database.Project.findOne({
         where: {
           slug
         }

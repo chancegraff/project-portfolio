@@ -1,9 +1,16 @@
+'use strict';
+
 module.exports = (sequelize, DataTypes) => {
-  const Project = sequelize.define('project', {
+  const Project = sequelize.define('Project', {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
+    },
+    createdAt: {
+      type: DataTypes.DATEONLY,
+      allowNull: false,
+      defaultValue: sequelize.literal('CURRENT_DATE'),
     },
     name: {
       type: DataTypes.STRING,
@@ -25,7 +32,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
       allowNull: false,
     },
-  });
+  }, {});
+
+  Project.associate = function(models) {
+    // associations can be defined here
+  };
 
   return Project;
 };
