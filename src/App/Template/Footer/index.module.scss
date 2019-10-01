@@ -13,15 +13,15 @@
   .nav-container {
     display: flex;
     flex-direction: column;
+    margin-right: auto;
 
     a {
-      font-size: $font-size-medium;
+      font-size: $font-size-base;
       color: $color-black;
-      text-decoration: underline;
-      margin-bottom: $element-spacing-large;
+      margin-bottom: $element-spacing-small;
 
       &:hover {
-        text-decoration: none;
+        text-decoration: underline;
       }
 
       &:last-of-type {
@@ -35,19 +35,15 @@
   }
 
   .social-container {
-    margin: 0 auto;
-
     .social-link {
+      display: inline-block;
+      width: 45px !important;
+      height: 45px !important;
       margin-right: $element-spacing-large;
 
-      & > div > svg {
-        filter: grayscale(100%) contrast(1000%) brightness(0%);
-        border-radius: 0 !important;
-      }
-
       @include responsive(mobile) {
-        width: 30px !important;
-        height: 30px !important;
+        width: 35px !important;
+        height: 35px !important;
         margin-right: $element-spacing-medium;
       }
 
@@ -55,11 +51,22 @@
         margin-right: 0;
       }
 
+      & > div > svg {
+        border-bottom: 3px solid transparent;
+        padding-bottom: 2px;
+        filter: grayscale(100%) contrast(1000%) brightness(0%);
+        border-radius: 0 !important;
+      }
+
+      &:hover > div > svg {
+        border-bottom: 3px solid $color-black;
+      }
     }
   }
 
   .logo {
-    height: 75px;
+    margin-left: auto;
+    height: 60px;
 
     rect {
       fill: $color-black;
@@ -74,7 +81,7 @@
     }
 
     @include responsive(mobile) {
-      height: 50px;
+      display: none;
     }
   }
 }

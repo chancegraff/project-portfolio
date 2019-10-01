@@ -25,6 +25,11 @@
     & > li {
       margin-bottom: $element-spacing-large;
       padding-left: $element-spacing-medium;
+      line-height: $line-height-large;
+
+      @include responsive(lg-desktop) {
+        line-height: $line-height-xlarge;
+      }
 
       &:last-of-type {
         margin-bottom: 0;
