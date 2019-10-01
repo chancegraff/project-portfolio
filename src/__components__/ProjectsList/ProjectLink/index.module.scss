@@ -1,3 +1,4 @@
+@import '__styles__/typography';
 @import '__styles__/spacing';
 @import '__styles__/colors';
 @import '__styles__/media';
@@ -26,7 +27,13 @@
       margin-bottom: $element-spacing-medium;
     }
 
-    .project-description {}
+    .project-description {
+      line-height: $line-height-large;
+
+      @include responsive(lg-desktop) {
+        line-height: $line-height-xlarge;
+      }
+    }
 
     &:hover .project-title {
       text-decoration: underline;
