@@ -41,8 +41,21 @@
     display: flex;
     margin: $element-spacing-xlarge 0;
 
+    @include responsive(mobile) {
+      flex-direction: column;
+    }
+
     .resume-list {
       width: 33%;
+
+      @include responsive(mobile) {
+        width: 100%;
+        margin-bottom: $element-spacing-medium;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
 
       & > li {
         margin-bottom: $element-spacing-medium;
