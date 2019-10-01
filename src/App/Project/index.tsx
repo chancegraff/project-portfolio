@@ -23,6 +23,27 @@ const getProject = gql(`
   }
 `);
 
+const redirectNode = <Redirect to="/404" />;
+
+const renderNode = (project: IProject | undefined | null = undefined): React.ReactNode => (
+  <div className={styles['details-container']}>
+    {project === null && redirectNode}
+    <Hero>
+      <SandboxSvg />
+    </Hero>
+    <Block className={styles['description-block']}>
+      <h1 className={styles['description-title']}>{project && project.name}</h1>
+      <p className={styles['description-paragraph']}>{project && project.description}</p>
+    </Block>
+    <Block
+      color="white"
+      className={styles['details-block']}
+    >
+      {project && <iframe className={styles['details-frame']} src={project.herokuUrl} title={project.name} />}
+    </Block>
+  </div>
+);
+
 const Project: React.FC<RouteComponentProps<{
   projectSlug: string,
 }>> = (props) => {
@@ -39,26 +60,6 @@ const Project: React.FC<RouteComponentProps<{
       projectSlug,
     },
   });
-
-  const redirectNode = <Redirect to="/404" />;
-  const renderNode = (project: IProject | undefined | null = undefined): React.ReactNode => (
-    <div className={styles['details-container']}>
-      {project === null && redirectNode}
-      <Hero>
-        <SandboxSvg />
-      </Hero>
-      <Block className={styles['description-block']}>
-        <h1 className={styles['description-title']}>{project && project.name}</h1>
-        <p className={styles['description-paragraph']}>{project && project.description}</p>
-      </Block>
-      <Block
-        color="white"
-        className={styles['details-block']}
-      >
-        Details!
-      </Block>
-    </div>
-  );
 
   return (
     <QueryHandler<{ project: IProject }>

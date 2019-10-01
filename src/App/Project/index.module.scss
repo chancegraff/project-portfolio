@@ -1,9 +1,18 @@
 .details-container {
+  width: 100%;
+
   .description-block {
     .description-title {}
 
     .description-paragraph {}
   }
 
-  .details-block {}
+  .details-block {
+    width: 100%;
+
+    .details-frame {
+      width: 100%;
+      min-height: 600px;
+    }
+  }
 }
