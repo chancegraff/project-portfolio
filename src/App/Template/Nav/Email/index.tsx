@@ -17,7 +17,7 @@ const Nav: React.FC<{
     },
   } = props;
 
-  let children: React.ReactNode = 'me@chancegraff.com';
+  let children: React.ReactNode = 'me@chancegraff.dev';
 
   if(mobile === true) {
     children = (
@@ -28,7 +28,7 @@ const Nav: React.FC<{
   return (
     <a
       className={styles['email-container']}
-      href="mailto:me@chancegraff.com"
+      href="mailto:me@chancegraff.dev"
       target="_blank"
       rel="noopener noreferrer"
     >
