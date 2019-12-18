@@ -37,19 +37,18 @@ const Splash: React.FC<{}> = () => {
           <p className={styles['me-paragraph']}>
             {`
               I'm an asexual American husband / programmer / designer / gamer / writer / cat dad, and
-              a Senior Engineer at
+              a Frontend Engineer at
             `}
             <a
               className={styles['ha-link']}
-              href="https://humanagency.org"
+              href="https://conduit.vc/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              HumanAgency
+              Conduit/Ventures
             </a>
             {`
-              in St Louis, Missouri.
-              I'm a life-long programmer having started before I was a teenager, and I've spent
+              . I'm a life-long programmer having started before I was a teenager, and I've spent
               the last five years as a professional developer in the local startup community.
             `}
           </p>
