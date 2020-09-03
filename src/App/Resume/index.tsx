@@ -7,9 +7,6 @@ import { ReactComponent as ResumeSvg } from '__media__/resume.svg';
 
 import styles from './index.module.scss';
 
-
-// TODO Implement actual resume
-
 const Resume: React.FC<{}> = () => {
   return (
     <div className={styles['resume-container']}>
@@ -41,15 +38,19 @@ const Resume: React.FC<{}> = () => {
           </ul>
         </div>
         <p className={styles['resume-paragraph']}>
-          <strong>Technical Skills:</strong> HTML and HTML5, CSS and CSS3, JavaScript, SQL,
-          Python, Django, ReactJS, AngularJS, Node, C#, VB, .NET, TSQL, Adobe Photoshop,
-          Microsoft Excel, OpenOffice, PHP, and Ruby (RoR)
+          <strong>Technical Skills:</strong> ReactJS, JavaScript, TypeScript,
+          HTML and HTML5, CSS and CSS3, SQL, Python, Django, AngularJS, Node,
+          C#, VB, .NET, TSQL, Adobe Photoshop, Microsoft Excel, OpenOffice,
+          PHP, and Ruby (RoR)
         </p>
       </Block>
       <Block color="white">
         <h2 className={styles['resume-title']}>Professional Experience</h2>
         <span className={styles['resume-position']}>
-          <strong>Remote Senior Engineer</strong>, Human Agency (2018 to Present)
+          <strong>Remote Senior Developer</strong>, Conduit/Ventures (2019 to Present)
+        </span>
+        <span className={styles['resume-position']}>
+          <strong>Remote Senior Engineer</strong>, Human Agency (2018 to 2019)
         </span>
         <ul className={styles['resume-list']}>
           <li>
