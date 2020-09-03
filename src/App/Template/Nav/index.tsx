@@ -17,7 +17,6 @@ const Nav: React.FC<{}> = (props) => (
   >
     {(mediaQueries): React.ReactNode => (
       <nav className={styles['nav-container']}>
-        <Link to="/sandbox">Sandbox</Link>
         <Link to="/resume">Resume</Link>
         <Email
           mediaQueries={mediaQueries}

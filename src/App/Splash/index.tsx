@@ -1,10 +1,7 @@
 import React from 'react';
-import { useQuery } from '@apollo/react-hooks';
-import { gql } from 'apollo-boost';
 
 import Hero from '__components__/Hero';
 import Block from '__components__/Block';
-import ProjectsList from '__components__/ProjectsList';
 
 import { ReactComponent as HeroSvg } from '__media__/splash.svg';
 import me from '__media__/headshot_final.jpg';
@@ -12,20 +9,7 @@ import me from '__media__/headshot_final.jpg';
 import styles from './index.module.scss';
 
 
-const getProjects = gql(`
-  query {
-    projects {
-      id
-      name
-      slug
-      shortDescription
-    }
-  }
-`);
-
 const Splash: React.FC<{}> = () => {
-  const query = useQuery(getProjects);
-
   return (
     <div className={styles['splash-container']}>
       <Hero>
@@ -54,18 +38,6 @@ const Splash: React.FC<{}> = () => {
           </p>
         </div>
         <img className={styles['me-image']} src={me} alt="My face" />
-      </Block>
-      <Block
-        color="white"
-        className={styles['projects-block']}
-      >
-        <h1 className={styles['projects-title']}>Recent Projects</h1>
-        <p className={styles['projects-description']}>
-          {`
-            These are some recent projects that I've been working on. Click through to view them in action!
-          `}
-        </p>
-        <ProjectsList projectsQuery={query} visibleProjects={3} />
       </Block>
     </div>
   );

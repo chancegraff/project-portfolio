@@ -11,7 +11,6 @@ const Footer: React.FC<{}> = (props) => (
   <footer className={styles['footer-container']}>
     <div className={styles['nav-container']}>
       <Link to="/">Home</Link>
-      <Link to="/sandbox">Sandbox</Link>
       <Link to="/resume">Resume</Link>
     </div>
     <div className={styles['social-container']}>
