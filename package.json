@@ -33,7 +33,7 @@
   },
   "scripts": {
     "start": "node server/server.js",
-    "heroku-postbuild": "(yarn install && yarn install --only=dev --no-shrinkwrap && yarn build); (cd server && yarn install);",
+    "postbuild": "(yarn install && yarn install --only=dev --no-shrinkwrap && yarn build); (cd server && yarn install);",
     "start:local": "concurrently --kill-others-on-fail \"yarn start:web\" \"yarn --cwd server start:server\"",
     "start:web": "react-scripts start",
     "build": "react-scripts build",
