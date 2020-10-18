@@ -20,19 +20,7 @@ const Splash: React.FC<{}> = () => {
           <h1 className={styles['me-title']}>Hello World</h1>
           <p className={styles['me-paragraph']}>
             {`
-              I'm an asexual American husband / programmer / designer / gamer / writer / cat dad, and
-              a Frontend Engineer at
-            `}
-            <a
-              className={styles['ha-link']}
-              href="https://conduit.vc/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Conduit/Ventures
-            </a>
-            {`
-              . I'm a life-long programmer having started before I was a teenager, and I've spent
+              I'm a life-long programmer having started before I was a teenager, and I've spent
               the last five years as a professional developer in the local startup community.
             `}
           </p>
