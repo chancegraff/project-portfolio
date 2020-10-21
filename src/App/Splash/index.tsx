@@ -4,7 +4,7 @@ import Hero from '__components__/Hero';
 import Block from '__components__/Block';
 
 import { ReactComponent as HeroSvg } from '__media__/splash.svg';
-import me from '__media__/IMG_1905.jpg';
+import me from '__media__/IMG_5491_mini.jpg';
 
 import styles from './index.module.scss';
 
