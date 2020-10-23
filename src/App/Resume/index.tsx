@@ -49,11 +49,6 @@ const Resume: React.FC<{}> = () => {
         <span className={styles['resume-position']}>
           <strong>Remote Senior Developer</strong>, Conduit/Ventures (2019 to Present)
         </span>
-        <ul className={styles['resume-list']}>
-          <li>
-            Enough proof for you, S.R.? ;)
-          </li>
-        </ul>
         <span className={styles['resume-position']}>
           <strong>Remote Senior Engineer</strong>, Human Agency (2018 to 2019)
         </span>
