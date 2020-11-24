@@ -49,6 +49,29 @@ const Resume: React.FC<{}> = () => {
         <span className={styles['resume-position']}>
           <strong>Remote Senior Developer</strong>, Conduit/Ventures (2019 to Present)
         </span>
+        <ul className={styles['resume-list']}>
+          <li>
+            Skipped onboarding in favor of a first-week assignment which was turned
+            around into an MVP within days and highlighted celebrity streamers on the platform.
+          </li>
+          <li>
+            Recommended and implemented client-side CPU/GPU monitoring before using it to improve
+            memory utilization by 100% while attaining a 40x reduction in CPU usage and a 10x
+            increase in long-term sessions.
+          </li>
+          <li>
+            Self-taught Golang while architecting and developing an enterprise-grade microservice
+            infrastructure which pulled articles from several sites to be voted on by millions of users.
+          </li>
+          <li>
+            Replaced years-old tech debt and wrote feature flagging configuration with fully-typed
+            interfaces using SOLID principles which allowed for future extension.
+          </li>
+          <li>
+            Completely rewrote client-side mobile web application while implementing an autoplay
+            gate for video streams that increased user engagement by 35% across all browsers.
+          </li>
+        </ul>
         <span className={styles['resume-position']}>
           <strong>Remote Senior Engineer</strong>, Human Agency (2018 to 2019)
         </span>
